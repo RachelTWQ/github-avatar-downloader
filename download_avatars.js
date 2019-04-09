@@ -56,7 +56,7 @@ getRepoCountributors(owner, name, function (err, result) {
     for (let i = 0; i < result.length; i++){
         //avatarUrl[data[i]["login"]] = data[i]["avatar_url"];
         var url =  result[i]['avatar_url'];
-        var filePath = './avatars/' + result[i]['login'];
+        var filePath = './avatars/' + result[i]['login'] + '.jpg';
         downloadImageByURL(url, filePath);
     }
     // return downloadImageByURL(avatarUrl);
